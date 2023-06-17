@@ -120,7 +120,7 @@ char *getTaxAmount(int A)
 
     int length = getStringLength(result2);
     printf("generated string length: %d\n", length);
-    
+
     char *finalValue = getDecimalRepresentation(result2, length);
     printf("final value: %s\n", finalValue);
 
@@ -130,13 +130,12 @@ char *getTaxAmount(int A)
 int main()
 {
     int numberA = 100;
-    int numberB = 5;
 
-    char *returnedNumber = getTaxAmount(numberA); // to call the function we must pass the reference of an integer and one integer
+    char *stringFormattedValue = getTaxAmount(numberA);
 
-    printf("you will have to pay R$%s\n", returnedNumber);
+    printf("you will have to pay R$%s\n", stringFormattedValue);
 
-    free(returnedNumber);
+    free(stringFormattedValue);
 
     return 0;
 }

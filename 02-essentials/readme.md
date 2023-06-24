@@ -117,6 +117,8 @@ An important distinction here is that between **actual parameters** and **formal
 - actual parameters: the **arguments** that are passed upon the function call
 
 - Call by value: actual values are not modified if changes are done to formal parameters - the values are copied. It is suitable for functions that return values (functions that don't modify the actual parameter)
+  - arrays **cannot** be passed as values
+  - structures **can** be passed as values - an structure with a property that is an array can be passed as value (this is an expensive operation, depending on the size of the array)
 ```c
 // this function takes two values - they are copied to it's scope - and returns a third value
 int sum(int a, int b){
@@ -145,3 +147,9 @@ void swap(int &a, int &b){
   b = temp;
 }
 ```
+
+## Object Orientation
+
+C is not an object oriented language, we can adopt an style close to object orientation on it by combining structures and functions: we define structures and initialize and operate on then only by means of functions.
+
+On the other hand, C++ is an object oriented language, we can take advantage of classes and methods on it.
